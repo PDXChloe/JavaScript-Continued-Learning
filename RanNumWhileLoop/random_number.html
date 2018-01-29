@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Random Number</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="style.css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+
+    <script>
+//        <!--generate a number from 1 to 10000-->
+        var upper = 10000;
+        var randomNumber = getRandomNumber(upper);
+        var guess;
+        var attempts = 0;
+
+        function getRandomNumber(upper) {
+            return Math.floor( Math.random() * upper) + 1;
+        }
+//        <!--Enter a while loop, inside this loop the computer will "guess" a number-->
+
+        while (guess !== randomNumber ) {
+            guess = getRandomNumber ( upper );
+            attempts += 1;
+        }
+
+        document.write("<p>The random Number was: " + randomNumber + "</p>");
+        document.write("<p>It took the computer " + attempts + " times to guess it</p>");
+    </script>
+
+    <!--Enter a while loop-->
+
+    </body>
+</html>
