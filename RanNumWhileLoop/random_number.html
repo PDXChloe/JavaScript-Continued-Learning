@@ -9,14 +9,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <div>
+            <p id="first"></p>
+            <p id="second"></p>
+        </div>
 
 
     <script>
 //        <!--generate a number from 1 to 10000-->
-        var upper = 10000;
-        var randomNumber = getRandomNumber(upper);
-        var guess;
-        var attempts = 0;
+        let upper = 10000;
+        let randomNumber = getRandomNumber(upper);
+        let guess;
+        let attempts = 0;
 
         function getRandomNumber(upper) {
             return Math.floor( Math.random() * upper) + 1;
@@ -28,8 +32,11 @@
             attempts += 1;
         }
 
-        document.write("<p>The random Number was: " + randomNumber + "</p>");
-        document.write("<p>It took the computer " + attempts + " times to guess it</p>");
+        let first = document.getElementById('first');
+        let second = document.getElementById('second');
+
+        first.innerText = "The random Number was: " + randomNumber + ".";
+        second.innerText = "It took the computer " + attempts + " times to guess it";
     </script>
 
     <!--Enter a while loop-->
